@@ -1,0 +1,559 @@
+
+
+
+/** menu **/
+#menu_game {
+    position:absolute;
+    top:0px;
+    right:0px;
+    border:2px solid #FFF;
+    background:black;
+    color:white;
+    width:200px;
+    height:425px;
+    z-index:999;
+    font-family:'cgothic';
+    box-shadow:2px 2px 25px black;
+    opacity:0.8;
+}
+
+
+     #menu_game .title {
+        margin:5px;
+        border:1px solid #333;
+        padding:5px;
+        height:15px;
+        width:180px;
+        font-size:13px;
+        background:black;
+        color:white;
+    }
+
+    #menu_game .button {
+        margin:5px;
+        border:1px solid #333;
+        padding:10px;
+        height:15px;
+        width:170px;
+        font-size:13px;
+    }
+        #menu_game .button:hover {
+            cursor:pointer;
+            background:#fff;
+            color:black;
+        }
+    #menu_game .button_active {
+        margin:5px;
+        border:1px solid #333;
+        padding:10px;
+        height:15px;
+        width:170px;
+        font-size:13px;
+        background:white;
+        color:black;
+    }
+    
+
+    #menu_game .sub_settings {
+        margin:5px;
+        border:1px solid #333;
+        padding:5px;
+        min-height:150px;
+        width:180px;
+        font-size:13px;
+    }
+
+
+    #menu_game .logo {
+        height:130px;
+        width:190px;
+        margin:5px;
+        margin-top:20px;
+        text-align:center;
+        padding-top:10px;
+    }
+
+
+
+
+
+
+
+
+
+#settings_pad {
+    background:black;
+    border:2px solid #FFF;
+    padding:5px;
+    position:absolute;
+    top:0;
+    right:0px;
+    opacity:0;
+    width:400px;
+    height:415px;
+    color:white;
+    font-family:'cgothic';
+    z-index:999;
+    cursor:default;
+}
+
+
+    #settings_pad .section {
+        width:99%;
+        min-height:100px;
+    }
+    #settings_pad h1 {
+        padding:5px;
+        border-left: 2px solid #001387;
+        font-size:13px;
+        font-weight:bold;
+    }
+
+    #settings_pad ul {
+        list-style-type:none;
+        margin-left: -30px;
+        margin-top:-10px;
+        width:20%;
+        float:left;
+    }
+
+    #settings_pad li {
+        font-size:11px;
+        width:400px;
+        float:left;
+        display:inline-block;
+    }
+    #settings_pad .description {
+        font-size:10px;
+        width:150px;
+        margin-left:9px;
+    }
+
+     #settings_pad .title {
+        font-size:11px;
+        margin-left:9px;
+        width:150px;
+    }
+
+    #settings_pad a {
+        display:block;
+        width:350px;
+    }
+
+    #settings_pad .cl {
+        height:10px;
+    }
+
+
+
+
+
+
+
+#help_pad {
+    background:black;
+    border:2px solid #FFF;
+    padding:5px;
+    position:absolute;
+    top:0;
+    right:0px;
+    opacity:0;
+    width:400px;
+    height:415px;
+    color:white;
+    font-family:'cgothic';
+    z-index:999;
+    cursor:default;
+}
+    #help_pad h1 {
+            padding:5px;
+            border-left: 2px solid #001387;
+            font-size:13px;
+            font-weight:bold;
+        }
+
+
+
+
+
+
+
+
+
+
+#credits_pad {
+    background:black;
+    border:2px solid #FFF;
+    padding:5px;
+    position:absolute;
+    top:0;
+    right:0px;
+    opacity:0;
+    width:400px;
+    height:415px;
+    color:white;
+    font-family:'cgothic';
+    z-index:999;
+    cursor:default;
+}
+
+    #credits_pad h1 {
+            padding:5px;
+            border-left: 2px solid #001387;
+            font-size:13px;
+            font-weight:bold;
+        }
+    #credits_pad .description {
+        font-size:10px;
+        width:150px;
+        margin-left:9px;
+    }
+
+     #credits_pad .title {
+        font-size:11px;
+        margin-left:9px;
+        width:150px;
+    }
+
+    #credits_pad .info {
+        font-size:11px;
+        width:390px;
+        margin-left:9px;
+    }
+
+     #credits_pad ul {
+        list-style-type:none;
+        margin-left:-30px;
+        margin-top:10px;
+        width:20%;
+    }
+
+    #credits_pad li {
+        font-size:10px;
+        width:400px;
+        display:inline-block;
+    }
+
+
+
+
+    
+#newgame_pad {
+    background:black;
+    border:2px solid #FFF;
+    padding:5px;
+    position:absolute;
+    top:0;
+    right:0px;
+    opacity:0;
+    width:400px;
+    height:415px;
+    color:white;
+    font-family:'cgothic';
+    z-index:999;
+    cursor:default;
+}
+
+    #newgame_pad input {
+        border:1px solid white;
+        padding:5px;
+        margin:10px;
+        color:white;
+        font-family:'cgothic';
+        width:130px;
+        font-size:12px;
+        background:#283851;
+    }
+
+    #newgame_pad h1 {
+            padding:5px;
+            border-left: 2px solid #001387;
+            font-size:13px;
+            font-weight:bold;
+        }
+    #newgame_pad .description {
+        font-size:10px;
+        width:150px;
+        margin-left:9px;
+    }
+
+     #newgame_pad .title {
+        font-size:11px;
+        margin-left:9px;
+        width:150px;
+    }
+
+    #newgame_pad .info {
+        font-size:11px;
+        width:390px;
+        margin-left:9px;
+    }
+
+     #newgame_pad ul {
+        list-style-type:none;
+        margin-left:-30px;
+        margin-top:10px;
+        width:20%;
+    }
+
+    #newgame_pad li {
+        font-size:10px;
+        width:400px;
+        display:inline-block;
+    }
+
+
+
+
+
+
+
+
+#account_pad {
+    background:black;
+    border:2px solid #FFF;
+    padding:5px;
+    position:absolute;
+    top:0;
+    right:0px;
+    opacity:0;
+    width:400px;
+    height:415px;
+    color:white;
+    font-family:'cgothic';
+    z-index:999;
+    cursor:default;
+}
+
+    #account_pad h1 {
+            padding:5px;
+            border-left: 2px solid #001387;
+            font-size:13px;
+            font-weight:bold;
+        }
+
+        #account_pad .description {
+        font-size:10px;
+        width:150px;
+        margin-left:9px;
+    }
+
+     #account_pad .title {
+        font-size:11px;
+        margin-left:9px;
+        width:150px;
+    }
+
+
+    #account_pad .profileImage {
+        float:right;
+        height:90px;
+        width:90px;
+        overflow:hidden;
+        border:1px solid #DDD;
+        background:#DDD;
+    }
+
+     #account_pad ul {
+        list-style-type:none;
+        margin-left:-30px;
+        margin-top:10px;
+        width:20%;
+     }
+
+    #account_pad li {
+        font-size:10px;
+        width:400px;
+        display:inline-block;
+    }
+
+    #account_pad .info {
+        font-size:11px;
+        width:300px;
+        margin-left:9px;
+    }
+
+
+    #account_pad table {
+        border:1px solid white;
+        width:100%;
+        color:white;
+        font-size:10px;
+    }
+
+    #account_pad table td{
+        border:1px solid white;
+        min-width:50px;
+        text-align:center;
+    }
+
+
+
+
+
+
+
+
+    
+#ranks_pad {
+    background:black;
+    border:2px solid #FFF;
+    padding:5px;
+    position:absolute;
+    top:0;
+    right:0px;
+    opacity:0;
+    width:400px;
+    height:415px;
+    color:white;
+    font-family:'cgothic';
+    z-index:999;
+    cursor:default;
+    overflow:auto;
+}
+
+    #ranks_pad h1 {
+            padding:5px;
+            border-left: 2px solid #001387;
+            font-size:13px;
+            font-weight:bold;
+        }
+
+        #ranks_pad .description {
+        font-size:10px;
+        width:150px;
+        margin-left:9px;
+    }
+
+     #ranks_pad .title {
+        font-size:11px;
+        margin-left:9px;
+        width:150px;
+    }
+
+
+    #ranks_pad .profileImage {
+        float:right;
+        height:90px;
+        width:90px;
+        overflow:hidden;
+        border:1px solid #DDD;
+        background:#DDD;
+    }
+
+     #ranks_pad ul {
+        list-style-type:none;
+        margin-left:-30px;
+        margin-top:10px;
+        width:20%;
+     }
+
+    #ranks_pad li {
+        font-size:10px;
+        width:400px;
+        display:inline-block;
+    }
+
+    #ranks_pad .info {
+        font-size:11px;
+        width:300px;
+        margin-left:9px;
+    }
+
+
+    #ranks_pad table {
+        border:1px solid white;
+        width:100%;
+        color:white;
+        font-size:10px;
+        margin-top:15px;
+    }
+
+    #ranks_pad table td{
+        border:1px solid white;
+        min-width:50px;
+        text-align:center;
+    }
+
+
+
+
+
+
+
+
+    
+#loadgame_pad {
+    background:black;
+    border:2px solid #FFF;
+    padding:5px;
+    position:absolute;
+    top:0;
+    right:0px;
+    opacity:0;
+    width:400px;
+    height:415px;
+    color:white;
+    font-family:'cgothic';
+    z-index:999;
+    cursor:default;
+}
+
+
+    #loadgame_pad  .section {
+        width:99%;
+        min-height:100px;
+    }
+    #loadgame_pad  h1 {
+        padding:5px;
+        border-left: 2px solid #001387;
+        font-size:13px;
+        font-weight:bold;
+    }
+
+    #loadgame_pad  ul {
+        list-style-type:none;
+        margin-left: -30px;
+        margin-top:-10px;
+        width:20%;
+        float:left;
+    }
+
+    #loadgame_pad  li {
+        font-size:11px;
+        width:400px;
+        float:left;
+        display:inline-block;
+    }
+    #loadgame_pad  .description {
+        font-size:10px;
+        width:150px;
+        margin-left:9px;
+    }
+
+     #loadgame_pad  .title {
+        font-size:11px;
+        margin-left:9px;
+        width:100%;
+    }
+
+    #loadgame_pad  a {
+        display:block;
+        width:350px;
+    }
+
+    #loadgame_pad  .cl {
+        height:10px;
+    }
+
+    #loadgame_pad .thumb {
+        margin:8px; 
+        border:1px solid white;
+        float:left;
+        overflow:hidden;
+        width:55px;
+        height:55px;
+    }
+    #loadgame_pad .thumb:hover {
+        cursor:pointer;
+    }

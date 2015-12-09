@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<head>
+    <title>Anti rescue project</title>
+    
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+        <meta name="description" content="Anti-rescue project">
+        <meta name="keywords" content="Javascript, videogame, html5, canvas, platform, civile, edoardo, casella">
+        <meta name="author" content="">
+        <meta charset="UTF-8">
+
+        <meta property="og:url" content="http://www.edoardocasella.it/games/gsources/anti-rescue-project" />
+        <meta property="og:site_name" content="Anti-rescue project" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Anti-rescue project" />
+        <meta property="og:image" content="http://www.edoardocasella.it/games/gsources/anti-rescue-project/src/logo.jpg" />
+        <meta property="og:description" content="HTML5 platform game" />
+        <meta property="fb:app_id" content="7363627862327638" />
+    
+    <script type="text/javascript" src="js/jquery/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+
+
+    <!-- STYLESHEETS -->
+	<link href="css/style.css" rel="stylesheet" ></link>
+	<link href="css/game_menu.css" rel="stylesheet" ></link>
+    <link href="css/jquery.ui.slider.css" rel="stylesheet" ></link>
+
+    <!-- THE BIG JQUERY -->
+    <script type="text/javascript" src="js/render.js"></script>
+    <script type="text/javascript" src="js/ut_common/Vec2.js"></script>
+
+    <!-- SOCIAL FB-->
+    <script type="text/javascript" src="js/facebook/fb_jsdk.js"></script>
+    <script type="text/javascript" src="js/facebook/fb_login.js"></script>
+
+	<!--SOUNDS | by soundjs -->
+	<script type="text/javascript" src="js/easeljs/events/EventDispatcher.js"></script>
+    <script type="text/javascript" src="js/soundjs/Sound.js"></script>
+    <script type="text/javascript" src="js/soundjs/WebAudioPlugin.js"></script>
+    <script type="text/javascript" src="js/soundjs/HTMLAudioPlugin.js"></script>
+	<script type="text/javascript" src="js/g_sounds.js"></script>
+    <script type="text/javascript" src="js/s_sounds.js"></script>
+    <script type="text/javascript" src="js/s_soundHandler.js"></script>
+
+	<!-- ENGINE -->
+    <script type="text/javascript" src="js/ut_common/ut_dom_utils.js"></script>
+	<script type="text/javascript" src="js/ut_common/Vec2.js"></script>
+    <script type="text/javascript" src="js/ut_common/ut_math.js"></script>
+    <script type="text/javascript" src="js/g_global.js"></script>
+    <script type="text/javascript" src="js/g_sections.js"></script>
+    
+	<script type="text/javascript" src="js/p_inventary.js"></script>
+    <script type="text/javascript" src="js/p_weapons.js"></script>
+	<script type="text/javascript" src="js/p_player.js"></script>
+
+    <script type="text/javascript" src="js/m_soldierA.js"></script>
+    <script type="text/javascript" src="js/m_soldierF.js"></script>
+    <script type="text/javascript" src="js/m_soldierC.js"></script>
+    <script type="text/javascript" src="js/m_turret.js"></script>
+    <script type="text/javascript" src="js/o_movers.js"></script>
+    <script type="text/javascript" src="js/ai/ai.js"></script>
+
+	<!--<script type="text/javascript" src="js/ai/ai.js"></script>-->
+	<script type="text/javascript" src="js/ut_common/ut_canvas_support.js"></script>
+	<script type="text/javascript" src="js/g_maps.js"></script>
+	<script type="text/javascript" src="js/g_camera.js"></script>
+	<script type="text/javascript" src="js/c_combat.js"></script>
+
+    <script type="text/javascript" src="js/menu/mn_menu.js"></script>
+    <script type="text/javascript" src="js/g_local.js"></script>
+    <script type="text/javascript" src="js/g_input.js"></script>
+    <script type="text/javascript" src="js/g_game.js"></script>
+	<script type="text/javascript" src="js/page/pg_page.js"></script>
+	<script type="text/javascript" src="js/physics/Physix.js"></script>
+
+</head>
+
+
+
+
+<body>
+    
+    <div id="logocircle" title="civile - http://www.edoardocasella.it" style="background:url('src/page/logocircle-medium.png'); opacity:0.5; width:90px; height:83px;"></div>
+    <div id="window">
+        <div id="loadingInfo" style="z-index:9999;"></div>
+        <div class="login">
+			<div class="loginForm">
+
+
+                <span id="title" style="font-size:13px; font-weight:bold; color:#b6ff00; font-family:'cgothic';">Survival platform</span></br>
+				<span id="loginInfo" style="font-size:12px; color:white; font-family:'cgothic';">An HTML5 game experiment</span>
+				
+                
+
+
+
+                <div id="loginDiv" style="margin-top:10px; width:100%;">
+                <div id="loadOutput"></div>
+                <div id="load" style="width: 356px; margin-top: 5px;"><a href="#" id="submitLogin" style="color:white; margin-top:-15px; margin-bottom:5px; text-decoration:none; font-size:12px; padding:3px; font-family:'cgothic';">START</a>
+				<!--<a><fb:login-button show-faces="false" width="200" max-rows="1">Login with facebook</fb:login-button></a>-->
+				</div>    
+				</div>
+
+
+
+		    </div>
+		</div>
+		<div class="anteprima"></div> 
+
+        <div id="hud">
+            <div class="health"><img id="healthIMG" src="src/items/healthBox.png" /><p id="healthValue"></p></div>
+            <div class="ammo"><img id="weaponIMG" src="src/items/healthBox.png" /><p id="ammoValue"></p></div>
+            <div class="charge"><img id="Img1" src="src/items/charge.png" /><p id="chargeValue"></p></div>
+            <div class="doubleDamage" style="visibility:hidden;"><img src="src/items/doubleDamage.png" /><p id="doubleDamageValue"></p></div>
+        </div>
+
+        <canvas id="game"></canvas>
+    </div>
+
+    <!-- BOTTOM AREA -->
+	<div><p id="test" style="color:white;"></p></div>
+	<div id="bottomMenu">
+			<a href="#" id="fps" style="color:white; float:left; text-decoration:none;"></a>
+			
+			<a href="#" id="credits_footer" style="text-decoration:none;">Credits</a>
+			<a href="#" style="text-decoration:none;"> | Optimized for Google Chrome&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            
+        
+	</div>
+	<div id="credits-box">
+		<div class="section">
+			<div class="sectionTitle">Coding graphics and concept:</div>
+			<div class="list">Edoardo Casella (Civile)</div>
+			<div class="list">Davide Pagliara</div>
+		</div>
+		<div class="section">
+			<div class="sectionTitle">Sounds and music:</div>
+            <div class="list">Sounds:&nbsp;<a href="http://freesfx.co.uk" target="_blank">freesfx.co.uk</a></div>
+            <div class="list">Track "Future has passed" - Civile</div>
+		</div>
+		<div class="section">
+			<div class="sectionTitle">Thanks to:</div>
+            <div class="list">Marko &#352;valjek for his "particles tornado"</div>
+		</div>
+		<div class="section">
+			<div class="sectionTitle">Info and contacts</div>
+			<div class="list">Soundlibrary: soundjs</div>
+			<div class="list">Jquery</div>
+			<div class="list">SAT.js - released under MIT license</div>
+            <div class="list">email: cs.edoardo@gmail.com</div>
+		</div>
+		<div class="section">
+			<div class="sectionTitle">Contacts</div>
+            <div class="list"><a href="emailto:cs.edoardo@gmail.com" style="color:white;">cs.edoardo@gmail.com</a></div>
+		</div>
+		<div class="section" style="width:200px;">
+			<div class="sectionTitle"></div>
+				
+				<img src="src/page/logo_html5.png" height="50px" width="40px"/>
+				<img src="src/page/logo_chrome.png" height="50px" width="50px"/>
+			</div>
+		</div>
+
+
+</body>
