@@ -5,6 +5,7 @@ HTML5 Platform game, unprofessional, no temporal dimension (delta time) but work
 
 # Find it on:
 http://html5arcade.com/game/survive-and-collect/
+
 http://projects.edoardocasella.it/html5platformgame/
 
 # Info:
